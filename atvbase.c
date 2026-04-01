@@ -1,14 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "pilha.h"
 
-typedef struct{
-    int *vet;
-    int top;
-    int tam;
-}Pilha;
+int main(){
+    int tamanho;
+    printf("Digite o tamanho da pilha:\n");
+    scanf("%d", &tamanho);
+    Pilha p;
+    criarPilha(&p, tamanho);
 
-void criarPilha(Pilha *p, int tam){
-    p->vet = malloc(tam * sizeof(int));
-    p->top = -1;
-    p->tam = tam;
+    push(&p, 10);
+    push(&p, 20);
+    push(&p, 30);
+    push(&p, 40);
+    push(&p, 50);
+    mostrarPilha(&p);
+
+    return 0;
 }

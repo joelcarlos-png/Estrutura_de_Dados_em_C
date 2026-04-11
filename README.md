@@ -1,1 +1,1 @@
-Atividades sobre pilhas em C
+Atividades sobre filas em C

@@ -22,5 +22,6 @@ void mostrarFila(Fila *f);
 void inverter(Fila *f);
 int lerInteiro(const char *pergunta);
 char lerChar(const char *pergunta);
+void liberarFila(Fila *f);
 
 #endif

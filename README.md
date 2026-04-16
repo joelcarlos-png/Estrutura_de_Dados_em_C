@@ -1,1 +1,1 @@
-# Atividades sobre filas em C
+# Atividades sobre estrutura de dados em C

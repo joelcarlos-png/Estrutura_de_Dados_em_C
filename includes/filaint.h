@@ -1,0 +1,29 @@
+#ifndef FILAINT_H
+#define FILAINT_H
+
+typedef struct{
+    int *vet;
+    int fim;
+    int inicio;
+    int tam;
+    int qtd;
+}Fila;
+
+Fila *criarFila(int tamanho);
+int inserir(Fila *f, int valor);
+int remover(Fila *f);
+int isEmpty(Fila *f);
+int isFull(Fila *f);
+void mostrarFila(Fila *f);
+void painel();
+void liberar(Fila *f);
+int lerInteiro(const char *pergunta);
+int inverter(Fila *f);
+int verificarMaior(Fila *f1, Fila *f2);
+void organizarFilasCrescente(Fila *f1, Fila *f2, Fila *f3);
+void organizarFilasDecrescente(Fila *f1, Fila *f2, Fila *f3);
+bool queueClear(Fila *f);
+int mostrarDivisiveis(Fila *f, Fila *divisiveisPor3);
+int mostrarAritimetica(Fila *f);
+
+#endif

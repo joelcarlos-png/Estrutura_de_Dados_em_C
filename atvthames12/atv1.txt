@@ -1,0 +1,8 @@
+Em geral, a filas sao normalmete feita com um Struct, contendo os elementos(varios tipos de dados), seu inicio(int), o fim da fila(int),
+tbm pode adicionar coisas como o tamanho(int) e tbm a quantidade de elemento(int), mas nao e os principais, nas filas encadeadar muda um pouco,
+ela tem dois struct, um que guarda a o endereço do proximo Nó(*No), e tbm guarda o valor desse no, esse struct inteiro vai dentro de outro struct
+que vai gurdar o endereço do no de inicio e outro que guarda o enderço com o no do final
+
+para remover e inserir elementos, na estatica inserir: o fim + 1, que pula o indice para frente e adiciona o valor desejado, e para remover é o inicio + 1
+que pula o indice do inico para frente perdendo o valor que pulou assim removendo da fila, ja nas encadeadas ou ela apaga o no do inicio para remover
+ou ela adiciona mais um no com malloc para adicionar elementos

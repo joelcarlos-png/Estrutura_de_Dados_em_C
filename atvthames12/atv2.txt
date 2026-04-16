@@ -1,0 +1,4 @@
+Sobre a final circular, ela e uma pilha estatica mas com a resolucao do problema da fila estatrica pradrao, na fila estatica, o indico fim pode
+chegar no fim do vetor e ficar sem saber pra onde ir, assim ela resolve o problema mandando o fim para o incio dnv se ainda tvier espaco na fila,
+o inico e a mesma coisa se a fila nao estiver cheia e o inico chegar ao fim do vetor, ela volta para o inico dnv, ai a fila meio que vira um circulo
+voltando do fim para o inicio.

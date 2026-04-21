@@ -73,7 +73,7 @@ Para testar qualquer uma das estruturas, siga os passos abaixo:
 
 | Característica | Estática | Encadeada |
 | :--- | :--- | :--- |
-| **Alocação** | Memória Fixa (Vetor) | Memória dispersa (Ponteiros) |
+| **Alocação** | Memória contígua (Vetor) | Memória dispersa (Ponteiros) |
 | **Tamanho** | Fixo (definido na compilação) | Dinâmico (ajusta em tempo de execução) |
 | **Uso de Memória** | Ocupa o espaço total desde o início | Ocupa apenas o necessário para cada nó |
 

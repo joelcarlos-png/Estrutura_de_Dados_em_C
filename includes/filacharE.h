@@ -1,7 +1,9 @@
 #ifndef FILACHARE_H
 #define FILACHARE_H
 
-typedef struct{
+#include <stdbool.h>
+
+typedef struct No{
     char valor;
     struct No *proximo;
 }No;
@@ -13,15 +15,17 @@ typedef struct{
 }Fila;
 
 Fila *criarFila();
+Fila *clonarFila(Fila *orig);
 bool inserir(Fila *f, char valor);
 bool remover(Fila *f, char *valorRemovido);
 bool isEmpty(Fila *f);
-int size(Fila *f);
-void clear(Fila *f);
-void mostrarFila(Fila *f);
-void inverter(Fila *f);
+bool size(Fila *f, int *quantidadeDeElementos);
+bool clear(Fila *f);
+bool mostrarFila(Fila *f);
+bool inverter(Fila *f);
 int lerInteiro(const char *pergunta);
 char lerChar(const char *pergunta);
 void liberarFila(Fila *f);
+void painel();
 
 #endif

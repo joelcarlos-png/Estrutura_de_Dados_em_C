@@ -91,5 +91,3 @@ Developed by Joel Carlos
 -----
 
 *This project was created to consolidate knowledge in algorithms and data structures.*
-
-```

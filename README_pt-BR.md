@@ -35,6 +35,7 @@ O projeto está estruturado em quatro módulos principais:
 ├── Pilha_Encadeada/     # Implementação de Pilha com Ponteiros
 ├── Fila_Estatica/       # Implementação de Fila com Vetor
 ├── Fila_Encadeada/      # Implementação de Fila com Ponteiros
+├── Lista_Estatica/      # Implementacao de Listas com Vetor   
 ├── Includes/            # Biblioteca usadas para todas as pastas acima
 └── README.md            # Documentação do projeto
 ````

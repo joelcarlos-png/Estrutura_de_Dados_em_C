@@ -35,6 +35,7 @@ The project is structured into four main modules:
 ├── Pilha_Encadeada/     # Linked Stack implementation
 ├── Fila_Estatica/       # Static Queue implementation
 ├── Fila_Encadeada/      # Linked Queue implementation
+├── Lista_Estatica/      # Static List implementation
 ├── includes/            # Libraries used in the folders above
 └── README.md            # Project documentation
 ````

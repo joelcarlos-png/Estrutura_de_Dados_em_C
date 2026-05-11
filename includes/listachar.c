@@ -124,7 +124,7 @@ bool clearLista(Lista *l){
     return true;
 }
 
-bool ordenar(Lista *l){
+bool ordenar(Lista *l, int flag){
     Lista *aux = criarLista(l->fim + 1);
 
     while(!isEmpty(l)){
@@ -139,36 +139,16 @@ bool ordenar(Lista *l){
         char menor = aux->valor[0];
 
         for(int i = 0; i < aux->fim + 1; i++){
-            if(aux->valor[i] < menor){
-                menor = aux->valor[i];
-                menorindice = i;
-            }
-        }
-
-        remover(aux, menorindice, &valorRemov);
-        inserirFinal(l, valorRemov);
-    }
-    return true;
-}
-
-bool ordenarZA(Lista *l){
-    Lista *aux = criarLista(l->fim + 1);
-
-    while(!isEmpty(l)){
-        char valorRemovido;
-        remover(l, 0, &valorRemovido);
-        inserirFinal(aux, valorRemovido);
-    }
-
-    char valorRemov;
-    while (!isEmpty(aux)){
-        int menorindice = 0;
-        char menor = aux->valor[0];
-
-        for(int i = 0; i < aux->fim + 1; i++){
-            if(aux->valor[i] > menor){
-                menor = aux->valor[i];
-                menorindice = i;
+            if(flag == 0){
+                if(aux->valor[i] < menor){
+                    menor = aux->valor[i];
+                    menorindice = i;
+                }
+            }else if(flag == 1){
+                if(aux->valor[i] > menor){
+                    menor = aux->valor[i];
+                    menorindice = i;
+                }
             }
         }
 

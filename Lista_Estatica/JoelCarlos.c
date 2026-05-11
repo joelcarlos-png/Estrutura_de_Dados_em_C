@@ -115,16 +115,16 @@ int main(){
             break;
         case 9:
             if(lerInteiro("Tem certeza? (1: sim, 2:nao): ") == 1){
-                ordenar(l);
-                printf("Lista ordenada(A - Z) com sucesso!!\n", tamanho);
+                ordenar(l, 0);
+                printf("Lista ordenada(A - Z) com sucesso!!\n");
             }else{
                 printf("Voltando...\n");
             }
             break;
         case 10:
             if(lerInteiro("Tem certeza? (1: sim, 2:nao): ") == 1){
-                ordenarZA(l);
-                printf("Lista ordenada(Z - A) com sucesso!!\n", tamanho);
+                ordenar(l, 1);
+                printf("Lista ordenada(Z - A) com sucesso!!\n");
             }else{
                 printf("Voltando...\n");
             }

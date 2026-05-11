@@ -19,8 +19,7 @@ void mostrarLista(Lista *l);
 bool consultar(Lista *l, int indice);
 bool sizeLista(Lista *l, int *tamanhoLista);
 bool clearLista(Lista *l);
-bool ordenar(Lista *l);
-bool ordenarZA(Lista *l);
+bool ordenar(Lista *l, int flag);
 void painel();
 bool mostarInversa(Lista *l);
 

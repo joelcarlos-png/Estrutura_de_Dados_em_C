@@ -1,3 +1,5 @@
+English version here: [LINK](./README.md)
+
 # Estruturas de Dados em C 🚀
 Este repositório contém implementações de estruturas de dados fundamentais, desenvolvidas para fins de estudo e prática da linguagem C.  
 O projeto aborda os conceitos de **Filas** e **Pilhas**, explorando as diferenças entre alocação **Estática** e **Dinâmica (Encadeada)**.

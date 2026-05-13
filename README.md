@@ -1,3 +1,5 @@
+Versão em português aqui: [LINK](./README_pt-BR.md)
+
 # Data Structures in C 🚀
 
 This repository contains implementations of fundamental data structures developed for study and practice in C. The project covers the concepts of **Queues** and **Stacks**, exploring the differences between **Static** and **Dynamic (Linked)** allocation.

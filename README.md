@@ -51,7 +51,7 @@ To test any of the structures, follow the steps below:
 1.  **Clone the repository:**
 
     ```bash
-    git clone [https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git](https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git)
+    git clone https://github.com/joelcarlos-png/Estrutura_de_Dados_em_C.git
     ```
 
 2.  **Navigate to the desired folder:**

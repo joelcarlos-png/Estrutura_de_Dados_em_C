@@ -1,5 +1,5 @@
-#ifndef FILACHARE_H
-#define FILACHARE_H
+#ifndef FILACHAREDUPLA_H
+#define FILACHAREDUPLA_H
 
 #include <stdbool.h>
 
@@ -17,8 +17,9 @@ typedef struct{
 
 //Funcoes Maes
 Lista *criarLista(int tamanho);
-bool inserir(Lista *l);
-bool inserirPosicao(Lista *l, int indice);
+bool inserir(Lista *l, char valor);
+bool inserirPosicao(Lista *l,char valor, int indice);
+bool remover(Lista *l, int indice);
 bool isEmpty(Lista *l);
 void get(Lista *l, int indice);
 

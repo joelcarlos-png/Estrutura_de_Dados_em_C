@@ -102,6 +102,7 @@ bool mostarInversa(Lista *l){
         }
     }
     printf(" ]\n");
+    return true;
 }
 
 

@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <string.h>
-#include "listachar.h"
-#include "controle.h"
+#include "../includes/listachar.h"
+#include "../includes/controle.h"
 
 int main(){
     int op = lerInteiro("Digite o tamanho  para a lista: ");
@@ -64,11 +64,12 @@ int main(){
                 }
             }
             break;
-        case 3:
+        case 3: {
             int tamanho;
             sizeLista(l, &tamanho);
             printf("Tamanho da lista: %d\n", tamanho);
             break;
+        }
         case 4:
             if(lerInteiro("Tem certeza que deseja apagar TODA a lista? (1: sim, 2:nao): ") == 1){
                 clearLista(l);
@@ -80,7 +81,7 @@ int main(){
         case 5:
             mostrarLista(l);
             break;
-        case 6:
+        case 6: {
             if(lerInteiro("Tem certeza? (1: sim, 2:nao): ") == 1){
                 int tamanho;
                 sizeLista(l, &tamanho);
@@ -90,16 +91,18 @@ int main(){
                 printf("Voltando...\n");
             }
             break;
-        case 7:
+        }
+        case 7: {
             if(lerInteiro("Tem certeza? (1: sim, 2:nao): ") == 1){
                 mostarInversa(l);
                 clearLista(l);
-                printf("Lista limpa com sucesso!!\n", tamanho);
+                printf("Lista limpa com sucesso!!\n");
             }else{
                 printf("Voltando...\n");
             }
             break;
-        case 8:
+        }
+        case 8: {
             char palavra[64];
             printf("Digite a palavra: ");
             while(getchar() != '\n');
@@ -113,6 +116,7 @@ int main(){
                 }
             }
             break;
+        }
         case 9:
             if(lerInteiro("Tem certeza? (1: sim, 2:nao): ") == 1){
                 ordenar(l, 0);

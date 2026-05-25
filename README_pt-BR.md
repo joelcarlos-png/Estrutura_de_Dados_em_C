@@ -2,13 +2,13 @@ English version here: [LINK](./README.md)
 
 # Estruturas de Dados em C 🚀
 Este repositório contém implementações de estruturas de dados fundamentais, desenvolvidas para fins de estudo e prática da linguagem C.  
-O projeto aborda os conceitos de **Filas** e **Pilhas**, explorando as diferenças entre alocação **Estática** e **Dinâmica (Encadeada)**.
+O projeto aborda os conceitos de **Filas**, **Pilhas** e **Listas**, explorando as diferenças entre alocação **Estática** e **Dinâmica (Encadeada)**.
 
 ---
 
 ## 📋 Conteúdo
 
-O projeto está estruturado em quatro módulos principais:
+O projeto está estruturado em vários módulos principais:
 
 ### 1. Pilhas (Stacks) - Conceito LIFO (Last In, First Out)
 * **Pilha Estática:** Implementação utilizando arrays (vetores) com tamanho pré-definido.
@@ -17,6 +17,11 @@ O projeto está estruturado em quatro módulos principais:
 ### 2. Filas (Queues) - Conceito FIFO (First In, First Out)
 * **Fila Estática:** Implementação com vetores, geralmente utilizando a lógica de fila circular para melhor aproveitamento do espaço.
 * **Fila Encadeada:** Implementação dinâmica com nós apontando para o próximo elemento, permitindo crescimento flexível.
+
+### 3. Listas (Lists)
+* **Lista Estática:** Implementação de lista utilizando vetores.
+* **Lista Encadeada:** Implementação dinâmica de lista utilizando ponteiros.
+* **Lista Encadeada Circular:** Implementação dinâmica onde o último elemento aponta de volta para o primeiro, formando um ciclo.
 
 ---
 
@@ -33,13 +38,15 @@ O projeto está estruturado em quatro módulos principais:
 
 ```text
 .
-├── Pilha_Estatica/      # Implementação de Pilha com Vetor
-├── Pilha_Encadeada/     # Implementação de Pilha com Ponteiros
-├── Fila_Estatica/       # Implementação de Fila com Vetor
-├── Fila_Encadeada/      # Implementação de Fila com Ponteiros
-├── Lista_Estatica/      # Implementacao de Listas com Vetor   
-├── Includes/            # Biblioteca usadas para todas as pastas acima
-└── README.md            # Documentação do projeto
+├── Pilha_Estatica/          # Implementação de Pilha com Vetor
+├── Pilha_Encadeada/         # Implementação de Pilha com Ponteiros
+├── Fila_Estatica/           # Implementação de Fila com Vetor
+├── Fila_Encadeada/          # Implementação de Fila com Ponteiros
+├── Lista_Estatica/          # Implementação de Lista com Vetor
+├── Lista_Encadeada/         # Implementação de Lista com Ponteiros
+├── Lista_Encadeda_Circular/ # Implementação de Lista Circular com Ponteiros
+├── includes/                # Bibliotecas usadas para todas as pastas acima
+└── README.md                # Documentação do projeto
 ````
 
 ## 🚀 Como Executar o Projeto

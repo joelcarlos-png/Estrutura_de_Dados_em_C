@@ -2,13 +2,13 @@ Versão em português aqui: [LINK](./README_pt-BR.md)
 
 # Data Structures in C 🚀
 
-This repository contains implementations of fundamental data structures developed for study and practice in C. The project covers the concepts of **Queues** and **Stacks**, exploring the differences between **Static** and **Dynamic (Linked)** allocation.
+This repository contains implementations of fundamental data structures developed for study and practice in C. The project covers the concepts of **Queues**, **Stacks**, and **Lists**, exploring the differences between **Static** and **Dynamic (Linked)** allocation.
 
 ---
 
 ## 📋 Contents
 
-The project is structured into four main modules:
+The project is structured into several main modules:
 
 ### 1. Stacks - LIFO Concept (Last In, First Out)
 * **Static Stack:** Implementation using arrays with a pre-defined size.
@@ -17,6 +17,11 @@ The project is structured into four main modules:
 ### 2. Queues - FIFO Concept (First In, First Out)
 * **Static Queue:** Implementation with arrays, generally using circular queue logic for better space optimization.
 * **Linked Queue:** Dynamic implementation with nodes pointing to the next element, allowing flexible growth.
+
+### 3. Lists
+* **Static List:** List implementation using arrays.
+* **Linked List:** Dynamic list implementation using pointers.
+* **Circular Linked List:** Dynamic implementation where the last element points back to the first, forming a cycle.
 
 ---
 
@@ -33,13 +38,15 @@ The project is structured into four main modules:
 
 ```text
 .
-├── Pilha_Estatica/      # Static Stack implementation
-├── Pilha_Encadeada/     # Linked Stack implementation
-├── Fila_Estatica/       # Static Queue implementation
-├── Fila_Encadeada/      # Linked Queue implementation
-├── Lista_Estatica/      # Static List implementation
-├── includes/            # Libraries used in the folders above
-└── README.md            # Project documentation
+├── Pilha_Estatica/          # Static Stack implementation
+├── Pilha_Encadeada/         # Linked Stack implementation
+├── Fila_Estatica/           # Static Queue implementation
+├── Fila_Encadeada/          # Linked Queue implementation
+├── Lista_Estatica/          # Static List implementation
+├── Lista_Encadeada/         # Linked List implementation
+├── Lista_Encadeda_Circular/ # Circular Linked List implementation
+├── includes/                # Libraries used in the folders above
+└── README.md                # Project documentation
 ````
 
 -----

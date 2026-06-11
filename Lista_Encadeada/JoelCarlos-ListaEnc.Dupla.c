@@ -13,7 +13,7 @@ int main(void){
         qntListas = lerInteiro("Digite quantas listas vc quer ter espaço em um Array(maximo de 26): ");
     }
     ArrayListas listas[qntListas];
-    int listasRestantes = qntListas; 
+    int listasRestantes = qntListas;
     int quantidadeListas = qntListas - listasRestantes;
 
     for(int i=0;i<qntListas;i++){

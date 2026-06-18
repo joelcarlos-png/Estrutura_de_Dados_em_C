@@ -100,6 +100,7 @@ void procurar(No **raiz, double busca){
 }
 
 void excluir(No **raiz, double valor){
+    if (*raiz == NULL) return;
     if((*raiz)->chave == valor){
         No *aux = *raiz;
         if((*raiz)->esq != NULL && (*raiz)->dir == NULL){
@@ -112,23 +113,15 @@ void excluir(No **raiz, double valor){
             double var = verMenor(&(*raiz)->dir);
             (*raiz)->chave = var;
             excluir(&(*raiz)->dir, var);
-        }else if((*raiz)->esq == NULL && (*raiz)->dir == NULL){
-            *raiz == NULL;
-            free(aux);
         }else{
-            return;
+            *raiz = NULL;
+            free(aux);
         }
     }else{
         if(valor > (*raiz)->chave){
-            if((*raiz)->dir != NULL){
-                excluir(&(*raiz)->dir, valor);
-            }
-            return;
+            excluir(&(*raiz)->dir, valor);
         }else if (valor < (*raiz)->chave){
-            if((*raiz)->esq != NULL){
-                excluir(&(*raiz)->esq, valor);
-            }
-            return;
+            excluir(&(*raiz)->esq, valor);
         }
     }
 }

@@ -15,7 +15,7 @@ ABB *criarArvore(){
 
 No *criarNo(TIPO val){
     No *n = malloc(sizeof(No));
-    n->val = val;
+    n->val = val; 
     n->esq = NULL;
     n->dir = NULL;
 
@@ -59,7 +59,6 @@ bool inserir(ABB *a, TIPO val){
 }   
 
 TIPO verifMenor(ABB *a){
-	if(a->raiz == NULL){return -1;}
 	No *atual = a->raiz;
 	while(atual->esq != NULL){
 		atual = atual->esq;
@@ -68,7 +67,6 @@ TIPO verifMenor(ABB *a){
 }
 
 TIPO verifMaior(ABB *a){
-	if(a->raiz == NULL){return -1;}
 	No *atual = a->raiz;
 	while(atual->dir != NULL){
 		atual = atual->dir;

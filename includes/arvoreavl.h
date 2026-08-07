@@ -3,11 +3,12 @@
 
 #include <stdbool.h>
 
-typedef struct no{
+typedef struct no{ 
     int chave;
+    const char nome[50];
     struct no *esq, *dir;
 }No;
-
+ 
 typedef struct{
     No *raiz;
     int qtd;
@@ -16,8 +17,11 @@ typedef struct{
 ARR *criarArvore();
 No *criarNo(int val);
 
-bool inserir(No **raiz, int val);
-bool remover(No **raiz, int val);
+void inserir(No **raiz, int chave, const char nome[50]);
+bool remover(No **raiz, int chave);
+const char get(No *raiz, int chave);
+No verMenor(No *raiz);
+No verMaior(No *raiz);
 
 bool balancear(No **raiz);
 

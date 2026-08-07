@@ -6,7 +6,7 @@ ARR *criarARR(){
     ARR *a = malloc(sizeof(ARR));
     if(a == NULL) return NULL;
     a->qtd = 0;
-    a->raiz = NULL;
+    a->raiz = NULL; 
 
     return a;
 }

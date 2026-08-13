@@ -7,7 +7,7 @@
 static int maxInt(int a, int b){ return (a > b) ? a : b; }
 
 static void atualizarAltura(No *n){
-    if(n == NULL) return;
+    if(n == NULL) return; 
     n->altura = 1 + maxInt(altura(n->esq), altura(n->dir));
 }
 
@@ -36,14 +36,10 @@ void inserir(No **raiz, int chave, const char nome[50]){
     if(*raiz == NULL){
         No *novo = criarNo(chave, nome);
         *raiz = novo;
-    }else if(chave > (*raiz)->chave){
-        inserir(&(*raiz)->dir, chave, nome);
-    }else if(chave < (*raiz)->chave){
-        inserir(&(*raiz)->esq, chave, nome);
-    }else{
-        return;
-    }
-
+    }else if(chave > (*raiz)->chave)inserir(&(*raiz)->dir, chave, nome);
+    else if(chave < (*raiz)->chave)inserir(&(*raiz)->esq, chave, nome);
+    else return;
+    
     atualizarAltura(*raiz);
     balancear(raiz);
 }
@@ -148,17 +144,11 @@ bool balancear(No **raiz){
     int fb = fatorBalanceamento(*raiz);
 
     if(fb > 1){                                  
-        int fbEsq = fatorBalanceamento((*raiz)->esq);
-        if(fbEsq < 0){                            
-            rotacaoEsq(&(*raiz)->esq);         
-        }
+        if(fatorBalanceamento((*raiz)->esq) < 0)rotacaoEsq(&(*raiz)->esq);         
         rotacaoDir(raiz);                     
     }
     else if(fb < -1){                       
-        int fbDir = fatorBalanceamento((*raiz)->dir);
-        if(fbDir > 0){                          
-            rotacaoDir(&(*raiz)->dir);         
-        }
+        if(fatorBalanceamento((*raiz)->dir) > 0)rotacaoDir(&(*raiz)->dir);
         rotacaoEsq(raiz);                        
     }
 

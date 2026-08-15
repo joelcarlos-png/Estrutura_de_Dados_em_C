@@ -1,8 +1,8 @@
-Versão em português aqui: [LINK](./README_pt-BR.md)
+﻿Versão em português aqui: [LINK](./README_pt-BR.md)
 
 # Data Structures in C 🚀
 
-This repository contains implementations of fundamental data structures developed for study and practice in C. The project covers the concepts of **Queues**, **Stacks**, and **Lists**, exploring the differences between **Static** and **Dynamic (Linked)** allocation.
+This repository contains implementations of fundamental data structures developed for study and practice in C. The project covers the concepts of **Stacks**, **Queues**, **Lists**, and **Trees**, exploring the differences between **Static** and **Dynamic (Linked)** allocation.
 
 ---
 
@@ -20,8 +20,13 @@ The project is structured into several main modules:
 
 ### 3. Lists
 * **Static List:** List implementation using arrays.
-* **Linked List:** Dynamic list implementation using pointers.
-* **Circular Linked List:** Dynamic implementation where the last element points back to the first, forming a cycle.
+* **Linked List:** Dynamic list implementation using pointers (singly and doubly linked).
+* **Circular Linked List:** Dynamic implementation where the last element points back to the first, forming a cycle (singly and doubly linked).
+
+### 4. Trees
+* **Binary Tree:** Implementation of binary trees and binary search trees (BST).
+* **AVL Tree:** Self-balancing binary search tree.
+* **Red-Black Tree:** Self-balancing binary search tree with color-based balancing.
 
 ---
 
@@ -38,16 +43,24 @@ The project is structured into several main modules:
 
 ```text
 .
-├── Pilha_Estatica/          # Static Stack implementation
-├── Pilha_Encadeada/         # Linked Stack implementation
-├── Fila_Estatica/           # Static Queue implementation
-├── Fila_Encadeada/          # Linked Queue implementation
-├── Lista_Estatica/          # Static List implementation
-├── Lista_Encadeada/         # Linked List implementation
-├── Lista_Encadeda_Circular/ # Circular Linked List implementation
-├── includes/                # Libraries used in the folders above
-└── README.md                # Project documentation
-````
+├── Pilhas/
+│   ├── Pilha_Estatica/           # Static Stack implementation
+│   └── Pilha_Encadeada/          # Linked Stack implementation
+├── Filas/
+│   ├── Fila_Estatica/            # Static Queue implementation
+│   └── Fila_Encadeada/           # Linked Queue implementation
+├── Listas/
+│   ├── Lista_Estatica/           # Static List implementation
+│   ├── Lista_Encadeada/          # Linked List implementation (singly and doubly)
+│   └── Lista_Encadeda_Circular/  # Circular Linked List implementation
+├── Arvores/
+│   ├── Arvores_Binarias/         # Binary Tree / BST implementations
+│   ├── Arvores_AVL/              # AVL Tree implementation
+│   └── Arvore_RubroNegra/        # Red-Black Tree implementation
+├── includes/                     # Shared libraries used by all folders above
+├── README.md                     # Project documentation
+└── README_pt-BR.md               # Portuguese version of the documentation
+```
 
 -----
 
@@ -64,7 +77,7 @@ To test any of the structures, follow the steps below:
 2.  **Navigate to the desired folder:**
 
     ```bash
-    cd Pilha_Encadeada
+    cd Pilhas/Pilha_Encadeada
     ```
 
 3.  **Compile the source files:**

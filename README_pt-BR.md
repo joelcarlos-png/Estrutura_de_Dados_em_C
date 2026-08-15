@@ -1,8 +1,8 @@
-English version here: [LINK](./README.md)
+﻿English version here: [LINK](./README.md)
 
 # Estruturas de Dados em C 🚀
 Este repositório contém implementações de estruturas de dados fundamentais, desenvolvidas para fins de estudo e prática da linguagem C.  
-O projeto aborda os conceitos de **Filas**, **Pilhas** e **Listas**, explorando as diferenças entre alocação **Estática** e **Dinâmica (Encadeada)**.
+O projeto aborda os conceitos de **Pilhas**, **Filas**, **Listas** e **Árvores**, explorando as diferenças entre alocação **Estática** e **Dinâmica (Encadeada)**.
 
 ---
 
@@ -20,8 +20,13 @@ O projeto está estruturado em vários módulos principais:
 
 ### 3. Listas (Lists)
 * **Lista Estática:** Implementação de lista utilizando vetores.
-* **Lista Encadeada:** Implementação dinâmica de lista utilizando ponteiros.
-* **Lista Encadeada Circular:** Implementação dinâmica onde o último elemento aponta de volta para o primeiro, formando um ciclo.
+* **Lista Encadeada:** Implementação dinâmica de lista utilizando ponteiros (simples e dupla).
+* **Lista Encadeada Circular:** Implementação dinâmica onde o último elemento aponta de volta para o primeiro, formando um ciclo (simples e dupla).
+
+### 4. Árvores (Trees)
+* **Árvore Binária:** Implementação de árvores binárias e árvores binárias de busca (BST).
+* **Árvore AVL:** Árvore binária de busca autobalanceada.
+* **Árvore Rubro-Negra:** Árvore binária de busca autobalanceada com balanceamento baseado em cores.
 
 ---
 
@@ -38,16 +43,24 @@ O projeto está estruturado em vários módulos principais:
 
 ```text
 .
-├── Pilha_Estatica/          # Implementação de Pilha com Vetor
-├── Pilha_Encadeada/         # Implementação de Pilha com Ponteiros
-├── Fila_Estatica/           # Implementação de Fila com Vetor
-├── Fila_Encadeada/          # Implementação de Fila com Ponteiros
-├── Lista_Estatica/          # Implementação de Lista com Vetor
-├── Lista_Encadeada/         # Implementação de Lista com Ponteiros
-├── Lista_Encadeda_Circular/ # Implementação de Lista Circular com Ponteiros
-├── includes/                # Bibliotecas usadas para todas as pastas acima
-└── README.md                # Documentação do projeto
-````
+├── Pilhas/
+│   ├── Pilha_Estatica/           # Implementação de Pilha com Vetor
+│   └── Pilha_Encadeada/          # Implementação de Pilha com Ponteiros
+├── Filas/
+│   ├── Fila_Estatica/            # Implementação de Fila com Vetor
+│   └── Fila_Encadeada/           # Implementação de Fila com Ponteiros
+├── Listas/
+│   ├── Lista_Estatica/           # Implementação de Lista com Vetor
+│   ├── Lista_Encadeada/          # Implementação de Lista com Ponteiros (simples e dupla)
+│   └── Lista_Encadeda_Circular/  # Implementação de Lista Circular com Ponteiros
+├── Arvores/
+│   ├── Arvores_Binarias/         # Implementação de Árvore Binária / BST
+│   ├── Arvores_AVL/              # Implementação de Árvore AVL
+│   └── Arvore_RubroNegra/        # Implementação de Árvore Rubro-Negra
+├── includes/                     # Bibliotecas usadas para todas as pastas acima
+├── README.md                     # Documentação do projeto (inglês)
+└── README_pt-BR.md               # Documentação do projeto (português)
+```
 
 ## 🚀 Como Executar o Projeto
 
@@ -62,7 +75,7 @@ Para testar qualquer uma das estruturas, siga os passos abaixo:
 2.  **Acesse a pasta da estrutura desejada:**
 
     ```bash
-    cd Pilha_Encadeada
+    cd Pilhas/Pilha_Encadeada
     ```
 
 3.  **Compile os arquivos fonte:**

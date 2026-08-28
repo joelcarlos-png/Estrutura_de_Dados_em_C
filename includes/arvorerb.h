@@ -3,19 +3,17 @@
 
 #include <stdbool.h>
 
-#define PRETO 10
+#define PRETA 10
 #define VERMELHA 20
 
 typedef struct no{
     int valor;
-    int altura;
     int cor;
     struct no *esq, *dir, *pai;
 }No;
  
 typedef struct{
     No *raiz;
-    int qtd;
 }ARR;
 
 ARR *criarArvore();
@@ -23,7 +21,7 @@ No *criarNo(int val, No *pai);
 
 //func padrao
 void inserir(No **raiz, int valor);
-void repair(No **raiz);
+void repair(No **raiz, No **raizArvore);
 
 //percursos
 void percursos(No *raiz);

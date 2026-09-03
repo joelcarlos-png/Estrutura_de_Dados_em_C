@@ -13,7 +13,7 @@ No *criarNo(){
 }
 
 void inserir(No **raiz, char *palavra){
-    int i = tolower((unsigned char)palavra[0]) - 'a';
+    int i = tolower(palavra[0]) - 'a';
     if(i < 0 || i >= 26) return;
     if((*raiz)->letras[i] == NULL) (*raiz)->letras[i] = criarNo();
     if(palavra[1] == '\0'){

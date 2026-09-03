@@ -1,6 +1,7 @@
 #include <stdio.h> 
 #include <stdlib.h>
 #include <stdbool.h>
+#include <ctype.h>
 #include "arvoretrie.h"
 
 No *criarNo(){
@@ -12,48 +13,66 @@ No *criarNo(){
 }
 
 void inserir(No **raiz, char *palavra){
-    int i = palavra[0] - 'a';
+    if(palavra[0] == '\0') return;
+    int i = tolower((unsigned char)palavra[0]) - 'a';
+    if(i < 0 || i >= 26) return;
     if((*raiz)->letras[i] == NULL) (*raiz)->letras[i] = criarNo();
     if(palavra[1] == '\0'){
         (*raiz)->letras[i]->palavra = true;
         return;
     }
-    inserir((*raiz)->letras[i], palavra + 1);
+    inserir(&(*raiz)->letras[i], palavra + 1);
 }
 
-bool verifFrenteVazio(No *raiz[]){
+static bool verifFrenteVazio(No *raiz[]){
     for(int in = 0; in < 26; in++){
-        if((*raiz)->letras[in] != NULL) return true;
+        if((*raiz)->letras[in] != NULL) return false;
     }
-    return false;
-}
-
-static void excluirParci(No **raiz, char *palavraParci, No *ultimofim){
-    if((*raiz) == ultimofim) return;
-    No *pai;
-    for(int i = 0; palavraParci[2] != '\0'; i ++){
-        pai = ultimofim->letras[palavraParci[i] - 'a'];
-    }
+    return true;
 }
 
 void excluir(No **raiz, char *palavra){
-    No *ultimofim;
-    char *palavraParci;
-    int i = palavra[0] - 'a';
     if(palavra[0] == '\0') return;
-    if(palavra[1] == '/0'){
-        if(verifFrenteVazio(raiz)){
-            (*raiz)->palavra = false;
-            return;
+    int i = tolower(palavra[0]) - 'a';
+    if(i < 0 || i >= 26 || (*raiz)->letras[i] == NULL) return;
+    if(palavra[1] == '\0'){
+        (*raiz)->letras[i]->palavra = false;
+        if(verifFrenteVazio(&(*raiz)->letras[i])){
+            free((*raiz)->letras[i]);
+            (*raiz)->letras[i] = NULL;
         }
-        
-
+        return;
     }
-    if((*raiz)->palavra == true){
-        ultimofim = raiz;
-        palavraParci = palavra;
+    excluir(&(*raiz)->letras[i], palavra + 1);
+    if((*raiz)->letras[i] != NULL && verifFrenteVazio(&(*raiz)->letras[i]) && (*raiz)->letras[i]->palavra == false){
+        free((*raiz)->letras[i]);
+        (*raiz)->letras[i] = NULL;
     }
-    excluir((*raiz)->letras[i], palavra + 1);
 }
 
-void procurar(No *raiz);
+bool procurar(No *raiz, char *palavra){
+    if(palavra[0] == '\0') return false;
+    int i = tolower(palavra[0]) - 'a';
+    if(i < 0 || i >= 26 || raiz->letras[i] == NULL) return false;
+    if(palavra[1] == '\0') return raiz->letras[i]->palavra;
+    return procurar(raiz->letras[i], palavra + 1);
+}
+
+static void imprimirPalavras(No *raiz, char *buffer, int nivel){                                                                   
+    if(raiz == NULL) return;                                                                                                       
+    for(int i = 0; i < 26; i++){                                                                                                   
+        if(raiz->letras[i] != NULL){                                                                                                                                                                              
+            buffer[nivel] = 'a' + i;                                                                                               
+            if(raiz->letras[i]->palavra == true){                                                                                  
+                buffer[nivel + 1] = '\0';                                                                     
+                printf("%s\n", buffer);                                                                                            
+            }                                                                                                                      
+            imprimirPalavras(raiz->letras[i], buffer, nivel + 1);                                                                  
+        }                                                                                                                          
+    }                                                                                                                              
+}
+
+void mostrarTodas(No *raiz){                                                                                                       
+    char buffer[100];                                                                          
+    imprimirPalavras(raiz, buffer, 0);                                                                                             
+} 

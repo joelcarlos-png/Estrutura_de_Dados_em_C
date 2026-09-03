@@ -10,10 +10,9 @@ typedef struct no{
 
 No *criarNo();
 
-bool verifFrenteVazio(No *raiz[]);
-
 void inserir(No **raiz, char *palavra);
-void procurar(No **raiz, char *palavra);
-void excluir(No **raiz);
+bool procurar(No *raiz, char *palavra);
+void excluir(No **raiz, char *palavra);
+void mostrarTodas(No *raiz);
 
 #endif

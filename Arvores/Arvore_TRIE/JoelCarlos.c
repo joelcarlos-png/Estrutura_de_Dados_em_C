@@ -32,7 +32,7 @@ void painel(){
 }
 
 int main(){
-	No *raiz = criarNo();
+	No *raiz = criarNo(); 
 	if(raiz == NULL){
 		printf(VERMELHO "Nao foi possivel alocar memoria para a raiz!\n" RESET);
 		exit(1);

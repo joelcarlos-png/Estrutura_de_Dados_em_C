@@ -13,7 +13,6 @@ No *criarNo(){
 }
 
 void inserir(No **raiz, char *palavra){
-    if(palavra[0] == '\0') return;
     int i = tolower((unsigned char)palavra[0]) - 'a';
     if(i < 0 || i >= 26) return;
     if((*raiz)->letras[i] == NULL) (*raiz)->letras[i] = criarNo();
@@ -32,7 +31,6 @@ static bool verifFrenteVazio(No *raiz[]){
 }
 
 void excluir(No **raiz, char *palavra){
-    if(palavra[0] == '\0') return;
     int i = tolower(palavra[0]) - 'a';
     if(i < 0 || i >= 26 || (*raiz)->letras[i] == NULL) return;
     if(palavra[1] == '\0'){
@@ -58,6 +56,7 @@ bool procurar(No *raiz, char *palavra){
     return procurar(raiz->letras[i], palavra + 1);
 }
 
+//funcoes feita com IA, somente para verificacao de integridade das funcoes acima
 static void imprimirPalavras(No *raiz, char *buffer, int nivel){                                                                   
     if(raiz == NULL) return;                                                                                                       
     for(int i = 0; i < 26; i++){                                                                                                   
